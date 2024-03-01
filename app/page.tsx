@@ -4,13 +4,11 @@ import { useRouter } from 'next/navigation';
 import useLocalStorageState from 'use-local-storage-state';
 import { Howl } from 'howler';
 
-const basePath = process.env.repo || '';
-
 export default function Home() {
   const router = useRouter();
   const resolution = 20;
   const clearSound = new Howl({
-    src: [`${basePath}/sounds/clear.mp3`],
+    src: [`./sounds/clear.mp3`],
     volume: 0.1,
   });
 
@@ -46,9 +44,9 @@ function Dot({ i }: { i: number }) {
   const [active, setActive] = useLocalStorageState(String(i), {
     defaultValue: false,
   });
-  const inSound = new Howl({ src: [`${basePath}/sounds/in.mp3`], volume: 0.1 });
+  const inSound = new Howl({ src: [`./sounds/in.mp3`], volume: 0.1 });
   const outSound = new Howl({
-    src: [`${basePath}/sounds/out.mp3`],
+    src: [`./sounds/out.mp3`],
     volume: 0.1,
   });
 
