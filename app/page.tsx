@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import useLocalStorageState from 'use-local-storage-state';
 import { Howl } from 'howler';
 
-const basePath = process.env.REPOSITORY_NAME || '';
+const basePath = process.env.repo || '';
 
 export default function Home() {
   const router = useRouter();

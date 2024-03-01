@@ -2,6 +2,9 @@
 const nextConfig = {
   output: 'export',
   basePath: process.env.REPOSITORY_NAME,
+  env: {
+    repo: REPOSITORY_NAME,
+  },
   images: {
     unoptimized: true,
   },
